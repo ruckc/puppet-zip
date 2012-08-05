@@ -34,7 +34,7 @@ module Puppet
 
 			def retrieve
 				if not File.exists?(@resource[:zip])
-					raise Puppet::Error "Zip file does not exist #{@resource[:zip]}"
+					raise Puppet::Error, "Zip file does not exist #{@resource[:zip]}"
 				end
 				content = nil
 				begin
